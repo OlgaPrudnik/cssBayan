@@ -24,9 +24,8 @@ img{
     min-height: 100vh;
 }
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 650px;
+
+    width: 650px;
     margin: 5px;
     box-shadow: 0 5px 10px #3334;
 }
@@ -35,10 +34,11 @@ img{
     background-color: rgb(160, 88, 226);
     color: #fff;
     position: relative;
+   
+
 }
 .accordion__title{
     display: flex;
-    flex-wrap: wrap;
     padding: 15px;
     background: rgb(160, 88, 226);
     color:aliceblue;
@@ -57,6 +57,13 @@ img{
     color:#fff;
     transition: 0.2s linear;
 }
+.img{
+    display: none;
+}
+.accordion__title:hover ~ img{
+    display: block;
+    transition: 10s linear;
+}
 details[open] .accordion__title::after{
     transform: rotate(135deg);
 }
@@ -69,5 +76,5 @@ details:hover{
 }
 img:hover {
     background: rgba(201, 199, 199, 0.253);
-    transition: 0.5s ease-in-out;
+    
 }
