@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(224, 64, 96);
+}
+summary {
+    list-style: none; 
+}
+img{
+   
+    max-width:650px;
+    padding: 10px;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.row {
+
+    width: 650px;
+    margin: 5px;
+    box-shadow: 0 5px 10px #3334;
+}
+
+.accordion__item {
+    background-color: rgb(160, 88, 226);
+    color: #fff;
+    position: relative;
+   
+
+}
+.accordion__title{
+    display: flex;
+    padding: 15px;
+    background: rgb(160, 88, 226);
+    color:aliceblue;
+    border: 1px solid #444;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.accordion__title::after{
+    content: '+';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color:#fff;
+    transition: 0.2s linear;
+}
+.img{
+    display: none;
+}
+.accordion__title:hover ~ img{
+    display: block;
+    transition: 10s linear;
+}
+details[open] .accordion__title::after{
+    transform: rotate(135deg);
+}
+details[open] .accordion__title {
+    background: rgb(160, 88, 226);
+}
+details:hover{
+    background: rgb(160, 88, 226);
+    cursor: pointer;
+}
+img:hover {
+    background: rgba(201, 199, 199, 0.253);
+    
+}
